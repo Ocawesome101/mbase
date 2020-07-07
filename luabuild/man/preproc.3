@@ -1,0 +1,31 @@
+*NAME&
+        preproc - preprocessor library from PsychOS
+
+*DESCRIPTION
+        preproc& is a general-purpose preprocessor library written by ~Izaya& for #PsychOS 2&.  It supports user-created directives and direct calling through the ^__call& field of the returned library's metatable.  All methods will raise errors on failure.
+
+*FIELDS
+        directives&: @table&
+            Table of preprocessor directives.  Directives should be in the format ^--`<directive> <args>& in the processed file.  The only default directive is ^include&.
+
+*METDHOS
+        parsewords&(*line&:~string&): @table&
+            Returns a table of words from the string ~line&, parsing quotes and escapes.
+
+        *line&(*line&:~string&)
+            Returns either a ^function& - which can be called to get lines until it returns nil - or a string from processing ~line& using preprocessor directives.
+
+        *preproc&(*...&:~string&): ~string&
+            Returns the output from preprocessing the files listed in ~...&.
+
+        <*metatable field ^__call&>(*...&:~string&, *out&:~string&)
+            Writes the result of ^preproc.preproc&(~...&) to file ~out&.  This field allows syntax such as:
+
+                #local& preproc = ^require&(~"preproc"&)
+                ^preproc&(~"filea"&, ~"fileb"&, ~"outfile"&)
+
+*COPYRIGHT
+        preproc library& (c) 2020 Izaya.  Used with permission.  See ^https://git.shadowkat.net/Izaya/OC-PsychOS2&.
+
+*SEE ALSO
+        preproc&(*1&)
