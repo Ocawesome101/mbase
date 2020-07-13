@@ -1,7 +1,7 @@
 #!/usr/bin/env lua5.3
 -- lua-based build system. attempts to be compatible with standard lua. --
 
-local _PROC_VERSION = "0.1.0"
+local _PROC_VERSION = "0.2.0"
 
 local cmdline = {...}
 
@@ -37,8 +37,8 @@ local tgt = args[1] or opts.T or "default"
 local show = opts.X or opts.showexec
 
 local status = {
-  ok = "\27[32m OK \27[39m",
-  info = "\27[34mINFO\27[39m",
+  ok = "\27[92m OK \27[39m",
+  info = "\27[94mINFO\27[39m",
   fail = "\27[91mFAIL\27[39m"
 }
 
@@ -63,6 +63,7 @@ local data = bf:read("a")
 bf:close()
 
 local function ls(d)
+  d=d or "."
   local c = io.popen("ls --color=no " .. d)
   local files = {}
   local data = c:read("*a")
@@ -70,6 +71,7 @@ local function ls(d)
   for file in data:gmatch("[^%s\r\n]+") do
     files[#files + 1] = file
   end
+  table.sort(files)
   return setmetatable(files, {
     __call = function()
       local k, v = next(files)
@@ -79,6 +81,12 @@ local function ls(d)
       end
     end
   })
+end
+
+if _OSVERSION then -- override ls() for OpenComputers, since Monolith's io.popen is broken :/
+  ls = function(d)
+    return require("filesystem").list(d)
+  end
 end
 
 local env = setmetatable({}, {__index = _G})
@@ -114,9 +122,9 @@ local function exec(t)
   local deps = targets[t].deps or targets[t].dependencies or {}
   log("info", "Execute dependency targets for '" .. t .. "'")
   for i=1, #deps, 1 do
-    exec(t)
+    exec(deps[i])
   end
-  log("ok", "Executed", n, " dependency targets")
+  log("ok", "Executed", #deps, " dependency targets")
 
   local status, returned = pcall(targets[t].exec)
   
@@ -127,5 +135,7 @@ local function exec(t)
   
   log("ok", "Executed target '" .. t .. "'")
 end
+
+exec(tgt)
 
 os.exit()

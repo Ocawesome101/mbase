@@ -1,0 +1,1 @@
+return {["type"]="leaf",["active_view"]=1,["views"]={[1]={["active"]=true,["filename"]="build.sh",["type"]="doc",["text"]=false,["scroll"]={["y"]=0,["x"]=0},["selection"]={[1]=14,[2]=11,[3]=14,[4]=11}}}}
