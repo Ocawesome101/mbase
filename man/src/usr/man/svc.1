@@ -3,12 +3,20 @@
 
 [97mSYNOPSIS
         svc [95mlist
+<<<<<<< HEAD
         [97msvc enable [95mservice
+=======
+        [97msvc enable-[37m<[97mscript[37m|[97mservice[37m> [95mservice
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
         [97msvc disable [95mservice
         [97msvc start[37m|[97mstop [95mservice
 
 [97mDESCRIPTION
+<<<<<<< HEAD
         svc[37m is the default service management tool for the [97mInitMe[37m([97m1[37m) init system shipped with Monolith.  It supports enabling and disabling of services, as well as starting and stopping.
+=======
+        svc[37m is the default service management tool for the [97mInitMe[37m([97m1[37m) init system shipped with Monolith.  It supports enabling and disabling of both scripts and services, as well as starting and stopping.
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 [97mOPTIONS
         [97menable [95mservice[37m
@@ -24,11 +32,17 @@
                 Stops the background service [95mservice[37m, if it is running.
 
 [97mNOTES[37m
+<<<<<<< HEAD
         [Until 2020.7.09]  Due to a limitation with the current InitMe configuration scheme, a script and a service cannot both have the same name and be simultaneously enabled.
 
         [2020.7.09]  This has been fixed.  Scripts are now run in order from [93m/lib/scripts[37m.
 
         [2020.8.03]  Scripts are now run from [93m/lib/init/scripts[37m.
+=======
+        [Until 2020.7.9]  Due to a limitation with the current InitMe configuration scheme, a script and a service cannot both have the same name and be simultaneously enabled.
+
+        [2020.7.9]  This has been fixed.  Scrips are now run in order from [91m/lib/scripts[37m.
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 [97mCOPYRIGHT
         Monolith System Utilities[37m copyright (c) 2020 Ocawesome101 under the GNU GPLv3.

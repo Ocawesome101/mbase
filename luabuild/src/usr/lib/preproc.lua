@@ -1,3 +1,4 @@
+#!/usr/bin/env lua5.3
 -- Written by Izaya for PsychOS 2. --
 
 local preproc = {}
@@ -25,13 +26,18 @@ end
 function preproc.line(line) -- string -- -- Returns either a function - which can be called to get lines until it returns nil - or a string from processing *line* using preprocessor directives.
  if line:match("^%-%-#") then
   local directive, args = line:match("^%-%-#(%S+)%s(.+)")
-  print(directive,args)
+  print("\27[39m[ \27[96mPROC\27[39m ] "..directive,args)
   local args = preproc.parsewords(args)
   if preproc.directives[directive] then
    return preproc.directives[directive](table.unpack(args))
   else
    error("unknown preprocessor directive: "..directive)
   end
+ elseif line:match("@%[%{(.-)%}%]") then -- this directive was added by Ocawesome101
+  local expr = line:match("@%[%{(.-)%}%]")
+  local ok, err = assert(load("return " .. expr, "=@[{directive}]", "bt", _G))
+  line = line:gsub("@%[%{"..expr.."%}%]", tostring(assert(ok())))
+  return line
  else
   return line
  end
@@ -43,7 +49,7 @@ function preproc.preproc(...) -- string -- string -- Returns the output from pre
  for _,fname in ipairs(tA) do
   local f,e = io.open(fname)
   if not f then error("unable to open file "..fname..": "..e) end
-  print("proc", fname)
+  print("\27[39m[ \27[96mPROC\27[39m ] proc "..fname)
   for line in f:lines() do
    local r = preproc.line(line)
    if type(r) == "function" then
@@ -62,7 +68,7 @@ end
 
 preproc.directives.include = preproc.preproc
 
-return setmetatable(preproc,{__call=function(_,...)
+setmetatable(preproc,{__call=function(_,...)
  local tA = {...}
  local out = table.remove(tA,#tA)
  local f,e = io.open(out,"wb")
@@ -70,3 +76,5 @@ return setmetatable(preproc,{__call=function(_,...)
  f:write(preproc.preproc(table.unpack(tA)))
  f:close()
 end})
+
+return preproc
