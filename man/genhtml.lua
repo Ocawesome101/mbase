@@ -12,13 +12,13 @@ local inph = assert(io.open(inp, "r"))
 local outh = assert(io.open(out, "w"))
 
 local patterns = {
-  {"%#(.-)[%?%&%^%~%@%*]", "<span style=\"color:#DDDD00;font-weight:bold;\">%1</span>"},
-  {"%*(.-)[%?%&%^%~%#%@]", "<span style=\"color:#000000;font-weight:bold;\">%1</span>"},
-  {"%~(.-)[%?%&%^%#%@%*]", "<span style=\"color:#FF0000;font-weight:bold;\">%1</span>"},
-  {"%?(.-)[%&%^%~%#%@%*]", "<span style=\"color:#FF00FF;font-weight:bold;\">%1</span>"},
-  {"%@(.-)[%?%&%^%~%#%*]", "<span style=\"color:#00FF00;font-weight:bold;\">%1</span>"},
-  {"%^(.-)[%?%&%~%#%@%*]", "<span style=\"color:#00AAFF;font-weight:bold;\">%1</span>"},
-  {"%&", "<span style=\"color:#000000;\"></span>"},
+  {"%#", "<span style=\"color:#DDDD00;font-weight:bold;\">"},
+  {"%*", "<span style=\"color:#000000;font-weight:bold;\">"},
+  {"%~", "<span style=\"color:#FF0000;font-weight:bold;\">"},
+  {"%?", "<span style=\"color:#FF00FF;font-weight:bold;\">"},
+  {"%@", "<span style=\"color:#00FF00;font-weight:bold;\">"},
+  {"%^", "<span style=\"color:#00AAFF;font-weight:bold;\">"},
+  {"%&", "<span style=\"color:#000000;font-weight:normal;\">"},
   {"[%?%&%^%~%#%@%*]", ""}
 }
 

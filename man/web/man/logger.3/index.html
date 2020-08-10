@@ -1,41 +1,41 @@
-<html><title>man/logger.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME</span>
+<html><title>man/logger.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME<span style="color:000000;font-weight:normal;">
         logger - styled command-line loggers
 
 <span style="color:000000;font-weight:bold;">DESCRIPTION
-        logger</span> is a library that provides styled command-line loggers.  By defa
-ult, three styles are provided:  <span style="color:000000;font-weight:bold;">bracket</span>, which provides a logging style simil
-ar to <span style="color:000000;font-weight:bold;">init</span>; <span style="color:000000;font-weight:bold;">arrow</span>, which provides a logging style similar to <span style="color:DDDD00;font-weight:bold;">yay</span> or <span style="color:DDDD00;font-weight:bold;">makep
-kg</span>; and <span style="color:000000;font-weight:bold;">double</span>, which provides a slightly modified version of the <span style="color:000000;font-weight:bold;">arrow</span> sty
+        logger<span style="color:000000;font-weight:normal;"> is a library that provides styled command-line loggers.  By defa
+ult, three styles are provided:  <span style="color:000000;font-weight:bold;">bracket<span style="color:000000;font-weight:normal;">, which provides a logging style simil
+ar to <span style="color:000000;font-weight:bold;">init<span style="color:000000;font-weight:normal;">; <span style="color:000000;font-weight:bold;">arrow<span style="color:000000;font-weight:normal;">, which provides a logging style similar to <span style="color:DDDD00;font-weight:bold;">yay<span style="color:000000;font-weight:normal;"> or <span style="color:DDDD00;font-weight:bold;">makep
+kg<span style="color:000000;font-weight:normal;">; and <span style="color:000000;font-weight:bold;">double<span style="color:000000;font-weight:normal;">, which provides a slightly modified version of the <span style="color:000000;font-weight:bold;">arrow<span style="color:000000;font-weight:normal;"> sty
 le.
 
 <span style="color:000000;font-weight:bold;">METHODS
-        The logger</span> library can be directly called, identically to created obje
-cts.  The default style is <span style="color:000000;font-weight:bold;">bracket</span>.  Styles are stored in <span style="color:00FF00;font-weight:bold;">logger.prefixes</span>.
+        The <span style="color:000000;font-weight:bold;">logger<span style="color:000000;font-weight:normal;"> library can be directly called, identically to created obje
+cts.  The default style is <span style="color:000000;font-weight:bold;">bracket<span style="color:000000;font-weight:normal;">.  Styles are stored in <span style="color:00FF00;font-weight:bold;">logger.prefixes<span style="color:000000;font-weight:normal;">.
 
-        new<span style="color:000000;"></span>(<span style="color:000000;font-weight:bold;">style</span>:<span style="color:FF0000;font-weight:bold;">string</span>): <span style="color:00FF00;font-weight:bold;">table</span> or <span style="color:000000;font-weight:bold;">nil</span>, <span style="color:FF0000;font-weight:bold;">string</span>
+        new<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">style<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">): <span style="color:00FF00;font-weight:bold;">table<span style="color:000000;font-weight:normal;"> or <span style="color:000000;font-weight:bold;">nil<span style="color:000000;font-weight:normal;">, <span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">
                 Creates a new logger object using the specified style.
 
-        <span style="color:000000;font-weight:bold;">logger</span> object methods are listed below.
+        <span style="color:000000;font-weight:bold;">logger<span style="color:000000;font-weight:normal;"> object methods are listed below.
 
-        <span style="color:000000;font-weight:bold;">obj</span>:<span style="color:000000;font-weight:bold;">ok</span>(<span style="color:000000;font-weight:bold;">...</span>:<span style="color:FF0000;font-weight:bold;">string</span>)
-                Print a message using the <span style="color:000000;font-weight:bold;">ok</span> prefix.
+        <span style="color:000000;font-weight:bold;">obj<span style="color:000000;font-weight:normal;">:<span style="color:000000;font-weight:bold;">ok<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">...<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">)
+                Print a message using the <span style="color:000000;font-weight:bold;">ok<span style="color:000000;font-weight:normal;"> prefix.
 
-        <span style="color:000000;font-weight:bold;">obj</span>:<span style="color:000000;font-weight:bold;">info</span>(<span style="color:000000;font-weight:bold;">...</span>:<span style="color:FF0000;font-weight:bold;">string</span>)
-                Print a message using the <span style="color:000000;font-weight:bold;">info</span> prefix.
+        <span style="color:000000;font-weight:bold;">obj<span style="color:000000;font-weight:normal;">:<span style="color:000000;font-weight:bold;">info<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">...<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">)
+                Print a message using the <span style="color:000000;font-weight:bold;">info<span style="color:000000;font-weight:normal;"> prefix.
 
-        <span style="color:000000;font-weight:bold;">obj</span>:<span style="color:000000;font-weight:bold;">warn</span>(<span style="color:000000;font-weight:bold;">...</span>:<span style="color:FF0000;font-weight:bold;">string</span>)
-                Print a message using the <span style="color:000000;font-weight:bold;">warn</span> prefix.
+        <span style="color:000000;font-weight:bold;">obj<span style="color:000000;font-weight:normal;">:<span style="color:000000;font-weight:bold;">warn<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">...<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">)
+                Print a message using the <span style="color:000000;font-weight:bold;">warn<span style="color:000000;font-weight:normal;"> prefix.
 
-        <span style="color:000000;font-weight:bold;">obj</span>:<span style="color:000000;font-weight:bold;">fail</span>(<span style="color:000000;font-weight:bold;">...</span>:<span style="color:FF0000;font-weight:bold;">string</span>)
-                Print a message using the <span style="color:000000;font-weight:bold;">fail</span> prefix.
+        <span style="color:000000;font-weight:bold;">obj<span style="color:000000;font-weight:normal;">:<span style="color:000000;font-weight:bold;">fail<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">...<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">)
+                Print a message using the <span style="color:000000;font-weight:bold;">fail<span style="color:000000;font-weight:normal;"> prefix.
 
-<span style="color:000000;font-weight:bold;">EXAMPLES</span>
-        <span style="color:DDDD00;font-weight:bold;">local</span> logger = <span style="color:00AAFF;font-weight:bold;">require</span>(<span style="color:FF0000;font-weight:bold;">"logger"</span>)
-        <span style="color:DDDD00;font-weight:bold;">local</span> new = <span style="color:00AAFF;font-weight:bold;">logger</span>:<span style="color:00AAFF;font-weight:bold;">new</span>(<span style="color:FF0000;font-weight:bold;">"bracket"</span>)
-        <span style="color:00AAFF;font-weight:bold;">new</span>:<span style="color:00AAFF;font-weight:bold;">ok</span>(<span style="color:FF0000;font-weight:bold;">"Created a logger"</span>) <span style="color:00AAFF;font-weight:bold;">-- prints "</span>[  <span style="color:00FF00;font-weight:bold;">OK</span>  ] Created a logge
-r<span style="color:00AAFF;font-weight:bold;">"</span>
+<span style="color:000000;font-weight:bold;">EXAMPLES<span style="color:000000;font-weight:normal;">
+        <span style="color:DDDD00;font-weight:bold;">local<span style="color:000000;font-weight:normal;"> logger = <span style="color:00AAFF;font-weight:bold;">require<span style="color:000000;font-weight:normal;">(<span style="color:FF0000;font-weight:bold;">"logger"<span style="color:000000;font-weight:normal;">)
+        <span style="color:DDDD00;font-weight:bold;">local<span style="color:000000;font-weight:normal;"> new = <span style="color:00AAFF;font-weight:bold;">logger<span style="color:000000;font-weight:normal;">:<span style="color:00AAFF;font-weight:bold;">new<span style="color:000000;font-weight:normal;">(<span style="color:FF0000;font-weight:bold;">"bracket"<span style="color:000000;font-weight:normal;">)
+        <span style="color:00AAFF;font-weight:bold;">new<span style="color:000000;font-weight:normal;">:<span style="color:00AAFF;font-weight:bold;">ok<span style="color:000000;font-weight:normal;">(<span style="color:FF0000;font-weight:bold;">"Created a logger"<span style="color:000000;font-weight:normal;">) <span style="color:00AAFF;font-weight:bold;">-- prints "<span style="color:000000;font-weight:normal;">[  <span style="color:00FF00;font-weight:bold;">OK<span style="color:000000;font-weight:normal;">  ] Created a logge
+r<span style="color:00AAFF;font-weight:bold;">"<span style="color:000000;font-weight:normal;">
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
-        Monolith Libraries</span> (c) 2020 Ocawesome101 under the GNU GPLv3.
+        Monolith Libraries<span style="color:000000;font-weight:normal;"> (c) 2020 Ocawesome101 under the GNU GPLv3.
 
 </pre></div></body></html>

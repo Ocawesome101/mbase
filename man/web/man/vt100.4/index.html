@@ -1,85 +1,85 @@
-<html><title>man/vt100.4</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME</span>
+<html><title>man/vt100.4</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME<span style="color:000000;font-weight:normal;">
         vt100 - interface with the terminal through text-based commands
 
-<span style="color:000000;font-weight:bold;">DESCRIPTION</span>
-        The <span style="color:000000;font-weight:bold;">VT100</span> terminal specification is a common method of interfacing wit
+<span style="color:000000;font-weight:bold;">DESCRIPTION<span style="color:000000;font-weight:normal;">
+        The <span style="color:000000;font-weight:bold;">VT100<span style="color:000000;font-weight:normal;"> terminal specification is a common method of interfacing wit
 h the terminal on UNIX-like systems.  It provides a simple yet powerful textual 
 control scheme through the use of certain commands written to the terminal throu
-gh, for example, <span style="color:00AAFF;font-weight:bold;">io.write</span>.
+gh, for example, <span style="color:00AAFF;font-weight:bold;">io.write<span style="color:000000;font-weight:normal;">.
 
-<span style="color:000000;font-weight:bold;">COMMANDS</span>
-        Monolith's <span style="color:000000;font-weight:bold;">VT100</span> implementation provides the following escape codes.  
+<span style="color:000000;font-weight:bold;">COMMANDS<span style="color:000000;font-weight:normal;">
+        Monolith's <span style="color:000000;font-weight:bold;">VT100<span style="color:000000;font-weight:normal;"> implementation provides the following escape codes.  
 Each is documented appropriately.
 
-        <span style="color:000000;font-weight:bold;">{ESC}</span> is used to reference the ASCII escape character, 0x1B.
+        <span style="color:000000;font-weight:bold;">{ESC}<span style="color:000000;font-weight:normal;"> is used to reference the ASCII escape character, 0x1B.
 
         All numbers, unless otherwise specified, default to 1.  Return values ar
-e usually read through <span style="color:00AAFF;font-weight:bold;">io.read</span>.
+e usually read through <span style="color:00AAFF;font-weight:bold;">io.read<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>A<span style="color:000000;"></span>
-                Move the cursor up <span style="color:DDDD00;font-weight:bold;">nn</span> rows.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">A<span style="color:000000;font-weight:normal;">
+                Move the cursor up <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> rows.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>B<span style="color:000000;"></span>
-                Move the cursor down <span style="color:DDDD00;font-weight:bold;">nn</span> rows.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">B<span style="color:000000;font-weight:normal;">
+                Move the cursor down <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> rows.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>C<span style="color:000000;"></span>
-                Move the cursor forward <span style="color:DDDD00;font-weight:bold;">nn</span> columns.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">C<span style="color:000000;font-weight:normal;">
+                Move the cursor forward <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> columns.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>c<span style="color:000000;"></span>
-                Get the terminal name. Returns <span style="color:FF0000;font-weight:bold;">{ESC}[?1ocansi0c</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">c<span style="color:000000;font-weight:normal;">
+                Get the terminal name. Returns <span style="color:FF0000;font-weight:bold;">{ESC}[?1ocansi0c<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>D<span style="color:000000;"></span>
-                Move the cursor backward <span style="color:DDDD00;font-weight:bold;">nn</span> columns.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">D<span style="color:000000;font-weight:normal;">
+                Move the cursor backward <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> columns.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>E<span style="color:000000;"></span>
-                Moves the cursor down <span style="color:DDDD00;font-weight:bold;">nn</span> lines and sets the cursor position to
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">E<span style="color:000000;font-weight:normal;">
+                Moves the cursor down <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> lines and sets the cursor position to
  column 1.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>F<span style="color:000000;"></span>
-                Moves the cursor up <span style="color:DDDD00;font-weight:bold;">nn</span> lines and sets the cursor position to c
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">F<span style="color:000000;font-weight:normal;">
+                Moves the cursor up <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> lines and sets the cursor position to c
 olumn 1.
         
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">yy;xx</span>f<span style="color:000000;"></span>
-                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[xx;yyH</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">yy;xx<span style="color:FF0000;font-weight:bold;">f<span style="color:000000;font-weight:normal;">
+                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[xx;yyH<span style="color:000000;font-weight:normal;">.
         
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">yy;xx</span>H<span style="color:000000;"></span>
-                Move the cursor to row <span style="color:DDDD00;font-weight:bold;">yy</span>, column <span style="color:DDDD00;font-weight:bold;">xx</span>.  Does not scroll or go
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">yy;xx<span style="color:FF0000;font-weight:bold;">H<span style="color:000000;font-weight:normal;">
+                Move the cursor to row <span style="color:DDDD00;font-weight:bold;">yy<span style="color:000000;font-weight:normal;">, column <span style="color:DDDD00;font-weight:bold;">xx<span style="color:000000;font-weight:normal;">.  Does not scroll or go
  off-screen.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>J<span style="color:000000;"></span>
-                Clears portions of the screen.  <span style="color:DDDD00;font-weight:bold;">nn</span> defaults to 0.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">J<span style="color:000000;font-weight:normal;">
+                Clears portions of the screen.  <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> defaults to 0.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 0, clears the screen from the current cursor position
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 0, clears the screen from the current cursor position
  to the bottom.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 1, clears the screen from the top to the current curs
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 1, clears the screen from the top to the current curs
 or position.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 2, clears the entire screen. Resets the cursor positi
-on to <span style="color:000000;font-weight:bold;">1, 1</span>.
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 2, clears the entire screen. Resets the cursor positi
+on to <span style="color:000000;font-weight:bold;">1, 1<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>K<span style="color:000000;"></span>
-                Clears portions of the current line.  <span style="color:DDDD00;font-weight:bold;">nn</span> defaults to 0.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">K<span style="color:000000;font-weight:normal;">
+                Clears portions of the current line.  <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> defaults to 0.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 0, clears the current line from the current cursor po
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 0, clears the current line from the current cursor po
 sition to the end of the line.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 1, clears the current line from the beginning of the 
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 1, clears the current line from the beginning of the 
 line to the current cursor position.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 2, clears the entire current line.
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 2, clears the entire current line.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">aa;bb;cc;...</span>m<span style="color:000000;"></span>
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">aa;bb;cc;...<span style="color:FF0000;font-weight:bold;">m<span style="color:000000;font-weight:normal;">
                 Sets and unsets various terminal attributes such as text color. 
  Accepts multiple arguments per call.
 
                 Each argument is interpreted individually.
 
                 If the argument is in the range 30-37 or 90-97, sets the text fo
-reground color.  See <span style="color:000000;font-weight:bold;">COLORS</span> below.
+reground color.  See <span style="color:000000;font-weight:bold;">COLORS<span style="color:000000;font-weight:normal;"> below.
 
                 If the argument is in the range 40-47 or 100-107, sets the text 
-background color.  See <span style="color:000000;font-weight:bold;">COLORS</span> below.
+background color.  See <span style="color:000000;font-weight:bold;">COLORS<span style="color:000000;font-weight:normal;"> below.
 
                 If the argument is 0, resets all attributes - echo, foreground, 
 and background.
@@ -91,44 +91,44 @@ nd colors.
 
                 If the argument is 28, enables text echo.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>n<span style="color:000000;"></span>
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 6, returns the current cursor position as <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">yy;
-xx</span>R<span style="color:000000;"></span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">n<span style="color:000000;font-weight:normal;">
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 6, returns the current cursor position as <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">yy;
+xx<span style="color:FF0000;font-weight:bold;">R<span style="color:000000;font-weight:normal;">.
 
-                If <span style="color:DDDD00;font-weight:bold;">nn</span> is 5, returns <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">0</span>n<span style="color:000000;"></span> if the terminal's GPU is boun
-d to a screen and <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">3</span>n<span style="color:000000;"></span> if it is not.
+                If <span style="color:DDDD00;font-weight:bold;">nn<span style="color:000000;font-weight:normal;"> is 5, returns <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">0<span style="color:FF0000;font-weight:bold;">n<span style="color:000000;font-weight:normal;"> if the terminal's GPU is boun
+d to a screen and <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">3<span style="color:FF0000;font-weight:bold;">n<span style="color:000000;font-weight:normal;"> if it is not.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[S</span>
+        <span style="color:FF0000;font-weight:bold;">{ESC}[S<span style="color:000000;font-weight:normal;">
                 Scrolls the terminal down one line.  Does not restore previous c
 ontent.   
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>s<span style="color:000000;"></span>
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">s<span style="color:000000;font-weight:normal;">
                 Saves the current cursor position.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[T</span>
+        <span style="color:FF0000;font-weight:bold;">{ESC}[T<span style="color:000000;font-weight:normal;">
                 Scrolls the terminal up one line.  Does not restore previous con
 tent.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:</span>DDDD00;font-weight:bold;">nn</span>u<span style="color:000000;"></span>
+        <span style="color:FF0000;font-weight:bold;">{ESC}[<span style="color:DDDD00;font-weight:bold;">nn<span style="color:FF0000;font-weight:bold;">u<span style="color:000000;font-weight:normal;">
                 Restores the saved cursor position.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}D</span>
-                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[S</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}D<span style="color:000000;font-weight:normal;">
+                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[S<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}M</span>
-                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[T</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}M<span style="color:000000;font-weight:normal;">
+                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[T<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}7</span>
-                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[s</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}7<span style="color:000000;font-weight:normal;">
+                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[s<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:FF0000;font-weight:bold;">{ESC}8</span>
-                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[u</span>.
+        <span style="color:FF0000;font-weight:bold;">{ESC}8<span style="color:000000;font-weight:normal;">
+                Identical to <span style="color:FF0000;font-weight:bold;">{ESC}[u<span style="color:000000;font-weight:normal;">.
 
-<span style="color:000000;font-weight:bold;">COLORS</span>
+<span style="color:000000;font-weight:bold;">COLORS<span style="color:000000;font-weight:normal;">
         Monolith's VT100 emulator supports both standard and "bright" colors.  S
 tandard colors are accessed in the ranges 30-37 (foreground) and 40-47 (backgrou
 nd), and bright colors are accessed by adding 60 to the color value.  Colors can
- be configured through <span style="color:DDDD00;font-weight:bold;">/etc/vtcolors.cfg</span>.
+ be configured through <span style="color:DDDD00;font-weight:bold;">/etc/vtcolors.cfg<span style="color:000000;font-weight:normal;">.
 
         Color codes, their names, and their default hexvalues follow.
 
@@ -156,6 +156,6 @@ nd), and bright colors are accessed by adding 60 to the color value.  Colors can
         97/107          White           0xFFFFFF
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
-        Monolith System Interfaces</span> (c) 2020 Ocawesome101 under the GNU GPLv3.
+        Monolith System Interfaces<span style="color:000000;font-weight:normal;"> (c) 2020 Ocawesome101 under the GNU GPLv3.
 
 </pre></div></body></html>

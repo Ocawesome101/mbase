@@ -1,56 +1,56 @@
-<html><title>man/config.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME</span>
+<html><title>man/config.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME<span style="color:000000;font-weight:normal;">
         config - load and save configuration in the form of Lua tables
 
-<span style="color:000000;font-weight:bold;">DESCRIPTION</span>
-        In the beginning <span style="color:FF0000;font-weight:bold;">Sangar</span> wrote <span style="color:DDDD00;font-weight:bold;">OpenOS</span>, and it was stable, and it had 
-features, and there was little fun.  And <span style="color:DDDD00;font-weight:bold;">OpenOS</span> was rewritten by <span style="color:FF0000;font-weight:bold;">Payonel</span>, an
+<span style="color:000000;font-weight:bold;">DESCRIPTION<span style="color:000000;font-weight:normal;">
+        In the beginning <span style="color:FF0000;font-weight:bold;">Sangar<span style="color:000000;font-weight:normal;"> wrote <span style="color:DDDD00;font-weight:bold;">OpenOS<span style="color:000000;font-weight:normal;">, and it was stable, and it had 
+features, and there was little fun.  And <span style="color:DDDD00;font-weight:bold;">OpenOS<span style="color:000000;font-weight:normal;"> was rewritten by <span style="color:FF0000;font-weight:bold;">Payonel<span style="color:000000;font-weight:normal;">, an
 d it had more features, and it was more stable, and there was slightly more fun.
 
-        Then there was <span style="color:DDDD00;font-weight:bold;">Open Kernel</span>, and it had no features, and it was stable,
+        Then there was <span style="color:DDDD00;font-weight:bold;">Open Kernel<span style="color:000000;font-weight:normal;">, and it had no features, and it was stable,
  and there was much rejoicing.
 
         And behold, then there came a new operating system called <span style="color:DDDD00;font-weight:bold;">Open Kernel 2
-</span>, and it had features, and it was stable, and there was more rejoicing.  And <span style="color:DDDD00;font-weight:bold;">O
-pen Kernel 2</span> thought to itself, <span style="color:000000;font-weight:bold;">what do the people want?</span>, and the people want
-ed <span style="color:00FF00;font-weight:bold;">config</span>, and <span style="color:DDDD00;font-weight:bold;">Open Kernel 2</span> added <span style="color:00FF00;font-weight:bold;">config</span>, and there was still more rejoic
-ing.  And <span style="color:DDDD00;font-weight:bold;">Open Kernel 2</span> supported <span style="color:00FF00;font-weight:bold;">config</span>, and <span style="color:DDDD00;font-weight:bold;">Open Kernel</span> did not support 
-<span style="color:00FF00;font-weight:bold;">config</span>, and thus came OS-dependence and to <span style="color:DDDD00;font-weight:bold;">Open Kernel 2</span> the <span style="color:FF0000;font-weight:bold;">Developer</span> sen
-t features, but to <span style="color:DDDD00;font-weight:bold;">Open Kernel</span> he sent not features.  And there was some confu
+<span style="color:000000;font-weight:normal;">, and it had features, and it was stable, and there was more rejoicing.  And <span style="color:DDDD00;font-weight:bold;">O
+pen Kernel 2<span style="color:000000;font-weight:normal;"> thought to itself, <span style="color:000000;font-weight:bold;">what do the people want?<span style="color:000000;font-weight:normal;">, and the people want
+ed <span style="color:00FF00;font-weight:bold;">config<span style="color:000000;font-weight:normal;">, and <span style="color:DDDD00;font-weight:bold;">Open Kernel 2<span style="color:000000;font-weight:normal;"> added <span style="color:00FF00;font-weight:bold;">config<span style="color:000000;font-weight:normal;">, and there was still more rejoic
+ing.  And <span style="color:DDDD00;font-weight:bold;">Open Kernel 2<span style="color:000000;font-weight:normal;"> supported <span style="color:00FF00;font-weight:bold;">config<span style="color:000000;font-weight:normal;">, and <span style="color:DDDD00;font-weight:bold;">Open Kernel<span style="color:000000;font-weight:normal;"> did not support 
+<span style="color:00FF00;font-weight:bold;">config<span style="color:000000;font-weight:normal;">, and thus came OS-dependence and to <span style="color:DDDD00;font-weight:bold;">Open Kernel 2<span style="color:000000;font-weight:normal;"> the <span style="color:FF0000;font-weight:bold;">Developer<span style="color:000000;font-weight:normal;"> sen
+t features, but to <span style="color:DDDD00;font-weight:bold;">Open Kernel<span style="color:000000;font-weight:normal;"> he sent not features.  And there was some confu
 sion.
 
-        And the people said, let us make fun of the <span style="color:FF0000;font-weight:bold;">Developer</span> and refer to <span style="color:DDDD00;font-weight:bold;">Op
-en Kernel 2</span> as "an unstable poorly-debugged mess" (which it was), and the <span style="color:FF0000;font-weight:bold;">Deve
-loper</span> was angry.  And so the <span style="color:FF0000;font-weight:bold;">Developer</span> made a new OS, which he called <span style="color:DDDD00;font-weight:bold;">Proton
-</span>, and Proton was the name of a Steam extension, and there was confusion, and <span style="color:DDDD00;font-weight:bold;">P
-hoton</span> became known as <span style="color:DDDD00;font-weight:bold;">Photon</span>. And <span style="color:DDDD00;font-weight:bold;">Photon</span> supported <span style="color:00FF00;font-weight:bold;">config</span>, but did not su
-pport anything else, and the <span style="color:FF0000;font-weight:bold;">Developer</span> was happy, but the people were confused
+        And the people said, let us make fun of the <span style="color:FF0000;font-weight:bold;">Developer<span style="color:000000;font-weight:normal;"> and refer to <span style="color:DDDD00;font-weight:bold;">Op
+en Kernel 2<span style="color:000000;font-weight:normal;"> as "an unstable poorly-debugged mess" (which it was), and the <span style="color:FF0000;font-weight:bold;">Deve
+loper<span style="color:000000;font-weight:normal;"> was angry.  And so the <span style="color:FF0000;font-weight:bold;">Developer<span style="color:000000;font-weight:normal;"> made a new OS, which he called <span style="color:DDDD00;font-weight:bold;">Proton
+<span style="color:000000;font-weight:normal;">, and Proton was the name of a Steam extension, and there was confusion, and <span style="color:DDDD00;font-weight:bold;">P
+hoton<span style="color:000000;font-weight:normal;"> became known as <span style="color:DDDD00;font-weight:bold;">Photon<span style="color:000000;font-weight:normal;">. And <span style="color:DDDD00;font-weight:bold;">Photon<span style="color:000000;font-weight:normal;"> supported <span style="color:00FF00;font-weight:bold;">config<span style="color:000000;font-weight:normal;">, but did not su
+pport anything else, and the <span style="color:FF0000;font-weight:bold;">Developer<span style="color:000000;font-weight:normal;"> was happy, but the people were confused
 .
 
-        And <span style="color:FF0000;font-weight:bold;">Payonel</span> sold <span style="color:DDDD00;font-weight:bold;">OpenOS</span> with OpenComputers, and it was better than P
-hoton, and the fiftieth OS war raged upon the land.  And behold, <span style="color:DDDD00;font-weight:bold;">Photon</span> was ki
-lled, and there was much rejoicing from <span style="color:FF0000;font-weight:bold;">Payonel</span>.  But the <span style="color:FF0000;font-weight:bold;">Developer</span> wrote a 
-new operating system, and he called it <span style="color:DDDD00;font-weight:bold;">Monolith</span>, and <span style="color:DDDD00;font-weight:bold;">Monolith</span> was a new OS, 
-and <span style="color:DDDD00;font-weight:bold;">Monolith</span> was good.
+        And <span style="color:FF0000;font-weight:bold;">Payonel<span style="color:000000;font-weight:normal;"> sold <span style="color:DDDD00;font-weight:bold;">OpenOS<span style="color:000000;font-weight:normal;"> with OpenComputers, and it was better than P
+hoton, and the fiftieth OS war raged upon the land.  And behold, <span style="color:DDDD00;font-weight:bold;">Photon<span style="color:000000;font-weight:normal;"> was ki
+lled, and there was much rejoicing from <span style="color:FF0000;font-weight:bold;">Payonel<span style="color:000000;font-weight:normal;">.  But the <span style="color:FF0000;font-weight:bold;">Developer<span style="color:000000;font-weight:normal;"> wrote a 
+new operating system, and he called it <span style="color:DDDD00;font-weight:bold;">Monolith<span style="color:000000;font-weight:normal;">, and <span style="color:DDDD00;font-weight:bold;">Monolith<span style="color:000000;font-weight:normal;"> was a new OS, 
+and <span style="color:DDDD00;font-weight:bold;">Monolith<span style="color:000000;font-weight:normal;"> was good.
 
-        And <span style="color:DDDD00;font-weight:bold;">Monolith</span> was good, and <span style="color:DDDD00;font-weight:bold;">Photon</span> was not, and <span style="color:DDDD00;font-weight:bold;">Monolith</span> was given 
-features and support, and <span style="color:DDDD00;font-weight:bold;">Photon</span> and <span style="color:DDDD00;font-weight:bold;">Open Kernel 2</span> and <span style="color:DDDD00;font-weight:bold;">Open Kernel</span> were no
+        And <span style="color:DDDD00;font-weight:bold;">Monolith<span style="color:000000;font-weight:normal;"> was good, and <span style="color:DDDD00;font-weight:bold;">Photon<span style="color:000000;font-weight:normal;"> was not, and <span style="color:DDDD00;font-weight:bold;">Monolith<span style="color:000000;font-weight:normal;"> was given 
+features and support, and <span style="color:DDDD00;font-weight:bold;">Photon<span style="color:000000;font-weight:normal;"> and <span style="color:DDDD00;font-weight:bold;">Open Kernel 2<span style="color:000000;font-weight:normal;"> and <span style="color:DDDD00;font-weight:bold;">Open Kernel<span style="color:000000;font-weight:normal;"> were no
 t.  And the OS world was a complete mess, and everyone wrote code for everyone e
 lse, and confusion abounded.
 
 <span style="color:000000;font-weight:bold;">METHODS
-        load</span>(<span style="color:000000;font-weight:bold;">file</span>:<span style="color:FF0000;font-weight:bold;">string</span>): <span style="color:00FF00;font-weight:bold;">table</span>
-                Loads a table from <span style="color:FF0000;font-weight:bold;">file</span>.
+        load<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">): <span style="color:00FF00;font-weight:bold;">table<span style="color:000000;font-weight:normal;">
+                Loads a table from <span style="color:FF0000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:000000;font-weight:bold;">save</span>(<span style="color:000000;font-weight:bold;">file</span>:<span style="color:FF0000;font-weight:bold;">string</span>, <span style="color:00FF00;font-weight:bold;">cfg</span>:<span style="color:00FF00;font-weight:bold;">table</span>)
-                Saves a table to <span style="color:FF0000;font-weight:bold;">file</span>.
+        <span style="color:000000;font-weight:bold;">save<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">, <span style="color:00FF00;font-weight:bold;">cfg<span style="color:000000;font-weight:normal;">:<span style="color:00FF00;font-weight:bold;">table<span style="color:000000;font-weight:normal;">)
+                Saves a table to <span style="color:FF0000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">.
 
-<span style="color:000000;font-weight:bold;">NOTES</span>
+<span style="color:000000;font-weight:bold;">NOTES<span style="color:000000;font-weight:normal;">
         Some parts of the story may be fictionalized.
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
-        Monolith Interfaces</span> (c) 2020 Ocawesome101 under the GNU GPLv3.
+        Monolith Interfaces<span style="color:000000;font-weight:normal;"> (c) 2020 Ocawesome101 under the GNU GPLv3.
 
 <span style="color:000000;font-weight:bold;">SEE ALSO
-        serialization</span>(<span style="color:000000;font-weight:bold;">3</span>)
+        serialization<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">3<span style="color:000000;font-weight:normal;">)
 
 </pre></div></body></html>

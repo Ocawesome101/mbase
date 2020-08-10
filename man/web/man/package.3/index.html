@@ -1,39 +1,39 @@
-<html><title>man/package.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME</span>
+<html><title>man/package.3</title><body><div style="width:80ch;"><pre><span style="color:000000;font-weight:bold;">NAME<span style="color:000000;font-weight:normal;">
         package - reimplementation of the Lua standard package library
 
 <span style="color:000000;font-weight:bold;">DESCRIPTION
-        package</span> is a partial re-implementation of the Lua-standard <span style="color:000000;font-weight:bold;">package</span> li
+        package<span style="color:000000;font-weight:normal;"> is a partial re-implementation of the Lua-standard <span style="color:000000;font-weight:bold;">package<span style="color:000000;font-weight:normal;"> li
 brary.
 
 <span style="color:000000;font-weight:bold;">METHODS
-        searchpath</span>(<span style="color:000000;font-weight:bold;">name</span>:<span style="color:FF0000;font-weight:bold;">string</span>, <span style="color:000000;font-weight:bold;">path</span>:<span style="color:FF0000;font-weight:bold;">string</span>[, <span style="color:000000;font-weight:bold;">sep</span>:<span style="color:FF0000;font-weight:bold;">string</span>[, <span style="color:000000;font-weight:bold;">rep</span>:<span style="color:FF0000;font-weight:bold;">s
-tring</span>]]): <span style="color:FF0000;font-weight:bold;">string</span> or nil, <span style="color:00FF00;font-weight:bold;">table</span>
-                Used internally by <span style="color:00AAFF;font-weight:bold;">require</span>.  Searches the provided <span style="color:FF0000;font-weight:bold;">path</span> for 
-<span style="color:FF0000;font-weight:bold;">name</span>.  Replaces all instances of <span style="color:FF0000;font-weight:bold;">?</span> in the path with <span style="color:FF0000;font-weight:bold;">name</span>.
+        searchpath<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">name<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">, <span style="color:000000;font-weight:bold;">path<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">[, <span style="color:000000;font-weight:bold;">sep<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">[, <span style="color:000000;font-weight:bold;">rep<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">s
+tring<span style="color:000000;font-weight:normal;">]]): <span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;"> or nil, <span style="color:00FF00;font-weight:bold;">table<span style="color:000000;font-weight:normal;">
+                Used internally by <span style="color:00AAFF;font-weight:bold;">require<span style="color:000000;font-weight:normal;">.  Searches the provided <span style="color:FF0000;font-weight:bold;">path<span style="color:000000;font-weight:normal;"> for 
+<span style="color:FF0000;font-weight:bold;">name<span style="color:000000;font-weight:normal;">.  Replaces all instances of <span style="color:FF0000;font-weight:bold;">?<span style="color:000000;font-weight:normal;"> in the path with <span style="color:FF0000;font-weight:bold;">name<span style="color:000000;font-weight:normal;">.
 
-                <span style="color:FF0000;font-weight:bold;">path</span> is expected to be formatted as a series of entries separa
-ted by the <span style="color:FF0000;font-weight:bold;">;</span> character.
+                <span style="color:FF0000;font-weight:bold;">path<span style="color:000000;font-weight:normal;"> is expected to be formatted as a series of entries separa
+ted by the <span style="color:FF0000;font-weight:bold;">;<span style="color:000000;font-weight:normal;"> character.
 
-<span style="color:000000;font-weight:bold;">GLOBALS</span>
-        The <span style="color:000000;font-weight:bold;">package</span> library defines the following globals.
+<span style="color:000000;font-weight:bold;">GLOBALS<span style="color:000000;font-weight:normal;">
+        The <span style="color:000000;font-weight:bold;">package<span style="color:000000;font-weight:normal;"> library defines the following globals.
 
-        <span style="color:00FF00;font-weight:bold;">package.loaded</span>
+        <span style="color:00FF00;font-weight:bold;">package.loaded<span style="color:000000;font-weight:normal;">
                 A cache of all loaded libraries.
 
-        <span style="color:FF0000;font-weight:bold;">package.path</span>
+        <span style="color:FF0000;font-weight:bold;">package.path<span style="color:000000;font-weight:normal;">
                 The path to search for libraries.
 
-        <span style="color:00AAFF;font-weight:bold;">dofile</span>(<span style="color:000000;font-weight:bold;">file</span>:<span style="color:FF0000;font-weight:bold;">string</span>): ... or <span style="color:000000;font-weight:bold;">nil</span>, <span style="color:FF0000;font-weight:bold;">string</span>
-                Attempt to execute file <span style="color:FF0000;font-weight:bold;">file</span>.
+        <span style="color:00AAFF;font-weight:bold;">dofile<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">): ... or <span style="color:000000;font-weight:bold;">nil<span style="color:000000;font-weight:normal;">, <span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">
+                Attempt to execute file <span style="color:FF0000;font-weight:bold;">file<span style="color:000000;font-weight:normal;">.
 
-        <span style="color:00AAFF;font-weight:bold;">require</span>(<span style="color:000000;font-weight:bold;">lib</span>:<span style="color:FF0000;font-weight:bold;">string</span>[, <span style="color:000000;font-weight:bold;">reload</span>:<span style="color:FF00FF;font-weight:bold;">boolean</span>]): ...
-                Attempt to load library <span style="color:FF0000;font-weight:bold;">lib</span> from the package path.  If the lib
-rary is already loaded <span style="color:000000;font-weight:bold;">and</span> <span style="color:FF00FF;font-weight:bold;">reload</span> is false or not specified, returns the cac
+        <span style="color:00AAFF;font-weight:bold;">require<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">lib<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">[, <span style="color:000000;font-weight:bold;">reload<span style="color:000000;font-weight:normal;">:<span style="color:FF00FF;font-weight:bold;">boolean<span style="color:000000;font-weight:normal;">]): ...
+                Attempt to load library <span style="color:FF0000;font-weight:bold;">lib<span style="color:000000;font-weight:normal;"> from the package path.  If the lib
+rary is already loaded <span style="color:000000;font-weight:bold;">and<span style="color:000000;font-weight:normal;"> <span style="color:FF00FF;font-weight:bold;">reload<span style="color:000000;font-weight:normal;"> is false or not specified, returns the cac
 hed library.  Othwewise, loads the library from disk.
 
-                On failure, <span style="color:00AAFF;font-weight:bold;">require</span> raises the error rather than returning it.
+                On failure, <span style="color:00AAFF;font-weight:bold;">require<span style="color:000000;font-weight:normal;"> raises the error rather than returning it.
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
-        Monolith System Interfaces</span> (c) 2020 Ocawesome101 under the GNU GPLv3.
+        Monolith System Interfaces<span style="color:000000;font-weight:normal;"> (c) 2020 Ocawesome101 under the GNU GPLv3.
 
 </pre></div></body></html>
