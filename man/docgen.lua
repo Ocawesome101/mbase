@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env lua
-=======
-#!/usr/bin/lua5.3
->>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 -- VT100-formatted man-page generator --
 
 local args = {...}
@@ -31,11 +27,7 @@ while true do
   outh:write(line .. "\n")
 end
 
-<<<<<<< HEAD
-print("[ \27[92m OK \27[39m ] generated manpage")
-=======
 print("\27[A[ \27[92m OK \27[39m ] generated manpage")
->>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 inph:close()
 outh:close()
