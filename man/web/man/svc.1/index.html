@@ -3,14 +3,24 @@
 
 <span style="color:000000;font-weight:bold;">SYNOPSIS
         svc <span style="color:FF00FF;font-weight:bold;">list
+<<<<<<< HEAD
         <span style="color:000000;font-weight:bold;">svc enable <span style="color:FF00FF;font-weight:bold;">service
+=======
+        <span style="color:000000;font-weight:bold;">svc enable-<span style="color:000000;font-weight:normal;"><<span style="color:000000;font-weight:bold;">script<span style="color:000000;font-weight:normal;">|<span style="color:000000;font-weight:bold;">service<span style="color:000000;font-weight:normal;">> <span style="color:FF00FF;font-weight:bold;">service
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
         <span style="color:000000;font-weight:bold;">svc disable <span style="color:FF00FF;font-weight:bold;">service
         <span style="color:000000;font-weight:bold;">svc start<span style="color:000000;font-weight:normal;">|<span style="color:000000;font-weight:bold;">stop <span style="color:FF00FF;font-weight:bold;">service
 
 <span style="color:000000;font-weight:bold;">DESCRIPTION
+<<<<<<< HEAD
         svc<span style="color:000000;font-weight:normal;"> is the default service management tool for the <span style="color:000000;font-weight:bold;">InitMe<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">1<span style="color:000000;font-weight:normal;">) init s
 ystem shipped with Monolith.  It supports enabling and disabling of services, as
  well as starting and stopping.
+=======
+        svc<span style="color:000000;font-weight:normal;"> is the default service management tool for the <span style="color:000000;font-weight:bold;">InitMe<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">1<span style="color:000000;font-weight:normal;">) init s
+ystem shipped with Monolith.  It supports enabling and disabling of both scripts
+ and services, as well as starting and stopping.
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 <span style="color:000000;font-weight:bold;">OPTIONS
         <span style="color:000000;font-weight:bold;">enable <span style="color:FF00FF;font-weight:bold;">service<span style="color:000000;font-weight:normal;">
@@ -28,6 +38,7 @@ s, similar to event listeners.
                 Stops the background service <span style="color:FF00FF;font-weight:bold;">service<span style="color:000000;font-weight:normal;">, if it is running.
 
 <span style="color:000000;font-weight:bold;">NOTES<span style="color:000000;font-weight:normal;">
+<<<<<<< HEAD
         [Until 2020.7.09]  Due to a limitation with the current InitMe configura
 tion scheme, a script and a service cannot both have the same name and be simult
 aneously enabled.
@@ -36,6 +47,14 @@ aneously enabled.
 ib/scripts<span style="color:000000;font-weight:normal;">.
 
         [2020.8.03]  Scripts are now run from <span style="color:DDDD00;font-weight:bold;">/lib/init/scripts<span style="color:000000;font-weight:normal;">.
+=======
+        [Until 2020.7.9]  Due to a limitation with the current InitMe configurat
+ion scheme, a script and a service cannot both have the same name and be simulta
+neously enabled.
+
+        [2020.7.9]  This has been fixed.  Scrips are now run in order from <span style="color:FF0000;font-weight:bold;">/lib
+/scripts<span style="color:000000;font-weight:normal;">.
+>>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
         Monolith System Utilities<span style="color:000000;font-weight:normal;"> copyright (c) 2020 Ocawesome101 under the GNU
