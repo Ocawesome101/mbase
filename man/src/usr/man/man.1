@@ -44,11 +44,14 @@
 
                 1 3 4 2 5
 
-        The vt100-formatted manual page is displayed using a [91mpager[37m.
+        The vt100-formatted manual page is displayed using a [91mpager[37m.  The default pager is [97mless[37m([97m1[37m).
 
 [97mENVIRONMENT[37m
         [97mMANPATH[37m or [97mMAN_PATH[37m
                 if $[97mMANPATH[37m or $[97mMAN_PATH[37m is set, its value is used as the path to search for manual pages.
+
+        [97mMANPAGER[37m or [97mMAN_PATER[37m
+                if $[97mMANPAGER[37m or $[97mMAN_PAGER[37m is set, [97mman[37m([97m1[37m) will attempt to load the specified file as its pager.
 
 [97mFILES[37m
         [93m/usr/share/man[37m

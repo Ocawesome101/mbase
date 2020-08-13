@@ -2,7 +2,6 @@
         initsvc - API for starting and stopping system daemons
 
 <span style="color:000000;font-weight:bold;">DESCRIPTION
-<<<<<<< HEAD
         initsvc<span style="color:000000;font-weight:normal;"> is provided by the <span style="color:000000;font-weight:bold;">InitMe<span style="color:000000;font-weight:normal;"> init system as a method of controll
 ing system services.  Starting and stopping services requires root access.
 
@@ -13,18 +12,6 @@ ing system services.  Starting and stopping services requires root access.
 <span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">
                 Start service <span style="color:FF0000;font-weight:bold;">service<span style="color:000000;font-weight:normal;">.  Looks for <span style="color:DDDD00;font-weight:bold;">/lib/init/services/<span style="color:FF0000;font-weight:bold;">service
 <span style="color:000000;font-weight:bold;">.lua<span style="color:000000;font-weight:normal;">.
-=======
-        initsvc<span style="color:000000;font-weight:normal;"> is provided by the <span style="color:000000;font-weight:bold;">InitMe<span style="color:000000;font-weight:normal;"> init system as a method of controll
-ing system services.  Starting and stopping services require root access.
-
-        Configuration is storeed in <span style="color:DDDD00;font-weight:bold;">/etc/initsvc.cfg<span style="color:000000;font-weight:normal;">.
-
-<span style="color:000000;font-weight:bold;">METHODS
-        start<span style="color:000000;font-weight:normal;">(<span style="color:000000;font-weight:bold;">service<span style="color:000000;font-weight:normal;">:<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">[, <span style="color:000000;font-weight:bold;">handler<span style="color:000000;font-weight:normal;">:<span style="color:00AAFF;font-weight:bold;">function<span style="color:000000;font-weight:normal;">]): <span style="color:FF00FF;font-weight:bold;">boolean<span style="color:000000;font-weight:normal;"> or <span style="color:000000;font-weight:bold;">nil<span style="color:000000;font-weight:normal;">, 
-<span style="color:FF0000;font-weight:bold;">string<span style="color:000000;font-weight:normal;">
-                Start service <span style="color:FF0000;font-weight:bold;">service<span style="color:000000;font-weight:normal;">.  Looks for <span style="color:DDDD00;font-weight:bold;">/lib/services/<span style="color:FF0000;font-weight:bold;">service<span style="color:000000;font-weight:bold;">.lua
-<span style="color:000000;font-weight:normal;">.
->>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
         <span style="color:000000;font-weight:bold;">list<span style="color:000000;font-weight:normal;">(): <span style="color:00FF00;font-weight:bold;">table<span style="color:000000;font-weight:normal;">
                 Returns a table of services, and whether they are running.  Each
@@ -41,7 +28,6 @@ ing system services.  Starting and stopping services require root access.
                 Disable service <span style="color:FF0000;font-weight:bold;">script<span style="color:000000;font-weight:normal;">.
 
 <span style="color:000000;font-weight:bold;">NOTES<span style="color:000000;font-weight:normal;">
-<<<<<<< HEAD
         [Until 2020.7.09]  Due to the manner in which <span style="color:000000;font-weight:bold;">initsvc<span style="color:000000;font-weight:normal;">'s configuration 
 is formatted, a script and a service cannot have the same name.  This may change
  in the future.
@@ -50,14 +36,6 @@ is formatted, a script and a service cannot have the same name.  This may change
  before services, from <span style="color:DDDD00;font-weight:bold;">/lib/scripts/<span style="color:000000;font-weight:normal;">.
 
         [2020.8.03]  Scripts are now run from <span style="color:DDDD00;font-weight:bold;">/lib/init/scripts/<span style="color:000000;font-weight:normal;">.
-=======
-        [Until 2020.7.9]  Due to the manner in which <span style="color:000000;font-weight:bold;">initsvc<span style="color:000000;font-weight:normal;">'s configuration i
-s formatted, a script and a service cannot have the same name.  This may change 
-in the future.
-
-        [2020.7.9]  This has been fixed.  Startup scripts are now run in order, 
-before services, from <span style="color:DDDD00;font-weight:bold;">/lib/scripts/<span style="color:000000;font-weight:normal;">.
->>>>>>> 537e16490b7ada8925b55437f79739b442e306fc
 
 <span style="color:000000;font-weight:bold;">COPYRIGHT
         Monolith System Interfaces<span style="color:000000;font-weight:normal;"> (c) 2020 Ocawesome101 under the GNU GPLv3.

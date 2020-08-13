@@ -44,11 +44,14 @@
 
                 1 3 4 2 5
 
-        The vt100-formatted manual page is displayed using a ~pager&.
+        The vt100-formatted manual page is displayed using a ~pager&.  The default pager is *less&(*1&).
 
 *ENVIRONMENT&
         *MANPATH& or *MAN_PATH&
                 if $*MANPATH& or $*MAN_PATH& is set, its value is used as the path to search for manual pages.
+
+        *MANPAGER& or *MAN_PATER&
+                if $*MANPAGER& or $*MAN_PAGER& is set, *man&(*1&) will attempt to load the specified file as its pager.
 
 *FILES&
         #/usr/share/man&
