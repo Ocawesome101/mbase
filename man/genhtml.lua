@@ -13,29 +13,24 @@ local outh = assert(io.open(out, "w"))
 
 local patterns = {
   {"%#", "<span style=\"color:#DDDD00;font-weight:bold;\">"},
-  {"%*", "<span style=\"color:#000000;font-weight:bold;\">"},
+  {"%*", "<span style=\"color:#FFFFFF;font-weight:bold;\">"},
   {"%~", "<span style=\"color:#FF0000;font-weight:bold;\">"},
   {"%?", "<span style=\"color:#FF00FF;font-weight:bold;\">"},
   {"%@", "<span style=\"color:#00FF00;font-weight:bold;\">"},
   {"%^", "<span style=\"color:#00AAFF;font-weight:bold;\">"},
-  {"%&", "<span style=\"color:#000000;font-weight:normal;\">"},
-  {"[%?%&%^%~%#%@%*]", ""}
+  {"%&", "<span style=\"color:#FFFFFF;font-weight:normal;\">"},
+  {"[%?%&%^%~%#%@%*]", ""},
+  {"\n", "<br>"},
+  {"  ", "&nbsp;&nbsp;"}
 }
 
-local data = ""
--- hacky solution for wrapping at 80 chars
-local c80 = string.rep(".?", 80)
-for line in inph:lines() do
-  for chunk in line:gmatch(c80) do
-    data = data .. chunk .. "\n"
-  end
-end
+local data = inph:read("a")
 for _, pat in ipairs(patterns) do
   data = data:gsub(pat[1], pat[2])
 end
 data = data:gsub("%%", "?") -- always the edge case :P
 data = data:gsub("%`", "#") -- and another one
-outh:write("<html><title>" .. inp .. "</title><body><div style=\"width:80ch;\"><pre>" .. data .. "\n</pre></div></body></html>")
+outh:write("<html><title>" .. inp .. "</title><body style=\"font-family:Courier;background-color:#000;color:#FFF;\">" .. data .. "\n</body></html>")
 
 print("\27[A\27[2K[ \27[92m OK \27[39m ] generated manpage " .. args[1])
 
