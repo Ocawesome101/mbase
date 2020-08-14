@@ -10,6 +10,12 @@
 
                 ~path& is expected to be formatted as a series of entries separated by the ~;& character.
 
+        *protect&(*tbl&:@table&[, *name&:~string&]): @table&
+                Returns a protected (i.e. read-only) version of the provided table.  Note that ^rawset& is wrapped specifically to allow this function to work.
+
+        *delay&(*lib&:@table&, *file&:~string&)
+                Set the metatable of library @lib& such that, when an attempt is made to index a nonexistent field, the provided ~file& will be loaded.  If the field is found, the metatable returns it.
+
 *GLOBALS&
         The *package& library defines the following globals.
 
@@ -23,7 +29,7 @@
                 Attempt to execute file ~file&.
 
         ^require&(*lib&:~string&[, *reload&:?boolean&]): ...
-                Attempt to load library ~lib& from the package path.  If the library is already loaded *and& ?reload& is false or not specified, returns the cached library.  Othwewise, loads the library from disk.
+                Attempt to load library ~lib& from the package path.  If the library is already loaded *and& ?reload& is false or not specified, returns the cached library.  Othwewise, reloads the library from disk.
 
                 On failure, ^require& raises the error rather than returning it.
 
