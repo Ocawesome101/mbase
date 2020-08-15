@@ -10,6 +10,12 @@
 
                 [91mpath[37m is expected to be formatted as a series of entries separated by the [91m;[37m character.
 
+        [97mprotect[37m([97mtbl[37m:[92mtable[37m[, [97mname[37m:[91mstring[37m]): [92mtable[37m
+                Returns a protected (i.e. read-only) version of the provided table.  Note that [94mrawset[37m is wrapped specifically to allow this function to work.
+
+        [97mdelay[37m([97mlib[37m:[92mtable[37m, [97mfile[37m:[91mstring[37m)
+                Set the metatable of library [92mlib[37m such that, when an attempt is made to index a nonexistent field, the provided [91mfile[37m will be loaded.  If the field is found, the metatable returns it.
+
 [97mGLOBALS[37m
         The [97mpackage[37m library defines the following globals.
 
@@ -23,7 +29,7 @@
                 Attempt to execute file [91mfile[37m.
 
         [94mrequire[37m([97mlib[37m:[91mstring[37m[, [97mreload[37m:[95mboolean[37m]): ...
-                Attempt to load library [91mlib[37m from the package path.  If the library is already loaded [97mand[37m [95mreload[37m is false or not specified, returns the cached library.  Othwewise, loads the library from disk.
+                Attempt to load library [91mlib[37m from the package path.  If the library is already loaded [97mand[37m [95mreload[37m is false or not specified, returns the cached library.  Othwewise, reloads the library from disk.
 
                 On failure, [94mrequire[37m raises the error rather than returning it.
 
