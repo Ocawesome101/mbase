@@ -15,19 +15,19 @@
                 Provides bindings of a fashion for common error codes.  Available are *misc&, *success&, *failure&, *argument&, and *permission&.
 
 *METHODS
-        setAlias&(*k&: ~string&, *v&: ~string&)
+        setAlias&(*k&:~string&, *v&:~string&)
                 Aliases the command ~k& to the string ~v&.
 
-        *unsetAlias&(*k&: ~string&)
+        *unsetAlias&(*k&:~string&)
                 Unsets the alias ~k& if it was previously set.
 
-        *error&(*cmd&: ~string&, *err&: ~string&)
+        *error&(*cmd&:~string&, *err&:~string&)
                 Writes a message in the format ~cmd: err& to standard error.
         
-        *expand&(*str&: ~string&): ~string&
+        *expand&(*str&:~string&):~string&
                 Expands the provided string for variables and basic wildcards.
 
-        *parse&(*...&: ~strings&): @table&, @table&
+        *parse&(*...&:~strings&): @table&, @table&
                 Parses the provided varargs ~...& into two tables @args& and @opts&.
 
                 If a provided argument is the string ~--&, then the function will insert all remaining varargs into the @args& table.
@@ -38,20 +38,20 @@
 
                 All other arguments will be inserted into the @args& table.
 
-        *getopt&(*args&: @table&, *argdefs&: @table&): @table&, @table&
+        *getopt&(*args&:@table&, *argdefs&:@table&): @table&, @table&
                 More flexible version of ^shell.parse& inspired by GNU *getopt()&.
 
                 @argdefs& should take the form of @{& [~"option"&] = @{& takesarg = ?boolean&, reqarg = ?boolean& @}&, *...& @}&.
 
                 ?takesarg& specifies whether the option will accept an argument and ?reqarg& specifies if the argument is required.  If an option is not specified in the table, ^shell.getopt& will parse it in a similar manner to ^shell.parse&.
 
-        *resolve&(*path&: ~string&[, *ext&: ~string&]): ~string& or *nil&, ~string&
+        *resolve&(*path&:~string&[, *ext&:~string&]): ~string& or *nil&, ~string&
                 Attempts to resolve the filename ~path& to a command.  Checks the absolute path if applicable, all entries in the path, and the current working directory, in order.
 
-        *split&(*str&: ~string&): @table&
+        *split&(*str&:~string&): @table&
                 Slower but slightly more advanced text splitting function.  Splits text on spaces, except when the space is between a pair of single quotes.
 
-        *execute&(*...&: ~strings&): ?boolean&
+        *execute&(*...&:~strings&): ?boolean&
                 Interprets ~...& as a shell command as seen in the manual page for *sh&(*1&).
 
 *COPYRIGHT

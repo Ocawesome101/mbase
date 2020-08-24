@@ -15,19 +15,19 @@
                 Provides bindings of a fashion for common error codes.  Available are [97mmisc[37m, [97msuccess[37m, [97mfailure[37m, [97margument[37m, and [97mpermission[37m.
 
 [97mMETHODS
-        setAlias[37m([97mk[37m: [91mstring[37m, [97mv[37m: [91mstring[37m)
+        setAlias[37m([97mk[37m:[91mstring[37m, [97mv[37m:[91mstring[37m)
                 Aliases the command [91mk[37m to the string [91mv[37m.
 
-        [97munsetAlias[37m([97mk[37m: [91mstring[37m)
+        [97munsetAlias[37m([97mk[37m:[91mstring[37m)
                 Unsets the alias [91mk[37m if it was previously set.
 
-        [97merror[37m([97mcmd[37m: [91mstring[37m, [97merr[37m: [91mstring[37m)
+        [97merror[37m([97mcmd[37m:[91mstring[37m, [97merr[37m:[91mstring[37m)
                 Writes a message in the format [91mcmd: err[37m to standard error.
         
-        [97mexpand[37m([97mstr[37m: [91mstring[37m): [91mstring[37m
+        [97mexpand[37m([97mstr[37m:[91mstring[37m):[91mstring[37m
                 Expands the provided string for variables and basic wildcards.
 
-        [97mparse[37m([97m...[37m: [91mstrings[37m): [92mtable[37m, [92mtable[37m
+        [97mparse[37m([97m...[37m:[91mstrings[37m): [92mtable[37m, [92mtable[37m
                 Parses the provided varargs [91m...[37m into two tables [92margs[37m and [92mopts[37m.
 
                 If a provided argument is the string [91m--[37m, then the function will insert all remaining varargs into the [92margs[37m table.
@@ -38,20 +38,20 @@
 
                 All other arguments will be inserted into the [92margs[37m table.
 
-        [97mgetopt[37m([97margs[37m: [92mtable[37m, [97margdefs[37m: [92mtable[37m): [92mtable[37m, [92mtable[37m
+        [97mgetopt[37m([97margs[37m:[92mtable[37m, [97margdefs[37m:[92mtable[37m): [92mtable[37m, [92mtable[37m
                 More flexible version of [94mshell.parse[37m inspired by GNU [97mgetopt()[37m.
 
                 [92margdefs[37m should take the form of [92m{[37m [[91m"option"[37m] = [92m{[37m takesarg = [95mboolean[37m, reqarg = [95mboolean[37m [92m}[37m, [97m...[37m [92m}[37m.
 
                 [95mtakesarg[37m specifies whether the option will accept an argument and [95mreqarg[37m specifies if the argument is required.  If an option is not specified in the table, [94mshell.getopt[37m will parse it in a similar manner to [94mshell.parse[37m.
 
-        [97mresolve[37m([97mpath[37m: [91mstring[37m[, [97mext[37m: [91mstring[37m]): [91mstring[37m or [97mnil[37m, [91mstring[37m
+        [97mresolve[37m([97mpath[37m:[91mstring[37m[, [97mext[37m:[91mstring[37m]): [91mstring[37m or [97mnil[37m, [91mstring[37m
                 Attempts to resolve the filename [91mpath[37m to a command.  Checks the absolute path if applicable, all entries in the path, and the current working directory, in order.
 
-        [97msplit[37m([97mstr[37m: [91mstring[37m): [92mtable[37m
+        [97msplit[37m([97mstr[37m:[91mstring[37m): [92mtable[37m
                 Slower but slightly more advanced text splitting function.  Splits text on spaces, except when the space is between a pair of single quotes.
 
-        [97mexecute[37m([97m...[37m: [91mstrings[37m): [95mboolean[37m
+        [97mexecute[37m([97m...[37m:[91mstrings[37m): [95mboolean[37m
                 Interprets [91m...[37m as a shell command as seen in the manual page for [97msh[37m([97m1[37m).
 
 [97mCOPYRIGHT
