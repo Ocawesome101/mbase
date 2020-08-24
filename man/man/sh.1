@@ -1,0 +1,24 @@
+*NAME&
+        sh - shell, the standard Monolith shell
+
+*SYNOPSIS
+        sh
+
+DESCRIPTION&
+        The *sh& utility is the standard command interpreter for the Monolith system.  It parses commands from a string entered by the user.
+
+        *sh& supports a very basic subset of the standard *sh& grammar, defined as follows.
+
+        If two or more statements are delimited by a *semicolon& (~;&), the statements will be interpreted independently and in order.
+
+        If two or more commands are delimited by the *pipe& (~|&) character, the output of each command will be fed (piped) into the input of the next.  Note that piping to and from shell builtins (view these with the *builtins& command) is impossible.
+
+        A token may contain spaces if it is contained inside single quotes; for example, ~'string with spaces'& will be interpreted as a single token with the quotes removed.
+
+        If a token the interpreter recognizes as a file path is terminated by an asterisk, the interpreter will attempt to expand the file path into all possible arguments contained inside the directory.  It should be noted that path expansion does not work with partial filenames, but only for the contents of a specific directory.
+
+*COPYRIGHT
+        Monolith System Utilities& (c) 2020 Ocawesome101 under the GNU GPLv3.
+
+*SEE ALSO
+        shell&(*3&), *sh&(*3&)

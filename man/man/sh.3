@@ -1,0 +1,18 @@
+*NAME&
+        sh - Library for basic things related to the shell
+
+*DESCRIPTION&
+        The *sh& library is used by #/bin/sh& for prompt parsing and running shell scripts.
+
+*METHODS
+        prompt&([*p&: ~string&]): ~string&
+                Parse the provided prompt ~p& as a shell prompt.  If ~p& is not specified, it will default to $*PS1& or, if $*PS1& is not set, ~p& defaults to '~\w\$ &'.
+
+        *execute&(*file&: ~string&): ?boolean& or *nil&, ~string&
+                Attempts to run the provided ~file& as a shell script.  Returns *nil& and an error message on failure.
+
+*COPYRIGHT
+        Monolith System Utilities& (c) 2020 Ocawesome101 under the GNU GPLv3.
+
+*SEE ALSO
+        sh&(*1&), *shell&(*3&)
