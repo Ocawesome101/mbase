@@ -133,7 +133,7 @@ local function checkMerges()
   return true
 end
 
-io.write("\27[2J")
+io.write("\27[9m\27[2J\27[29m")
 while true do
   random2()
   drawBoard()
