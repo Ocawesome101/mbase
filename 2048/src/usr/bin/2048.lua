@@ -1,6 +1,6 @@
 -- simple 2048 clone --
 
-local readline = require("readline").readline
+local readline = require("readline")
 
 print("2048 by Ocawesome101. Copyright (c) 2020 Ocawesome101 under the GNU GPLv3.")
 
